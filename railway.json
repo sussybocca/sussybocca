@@ -1,5 +1,4 @@
 {
-  "$schema": "https://railway.app/railway.schema.json",
   "services": {
     "frontend": {
       "path": "frontend",
@@ -16,7 +15,7 @@
       "path": "backend",
       "build": {
         "builder": "NODE",
-        "buildCommand": "npm install && npm run build"
+        "buildCommand": "npm install"
       },
       "deploy": {
         "startCommand": "npm run start:dev",
