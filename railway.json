@@ -1,4 +1,26 @@
 {
-  "$schema": "https://railway.app/railway.schema.json",
-  "startCommand": "./start.sh"
+  "services": {
+    "frontend": {
+      "path": "frontend",
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install && npm run build"
+      },
+      "deploy": {
+        "startCommand": "./start.sh frontend",
+        "port": 3000
+      }
+    },
+    "backend": {
+      "path": "backend",
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install && npm run build"
+      },
+      "deploy": {
+        "startCommand": "./start.sh backend",
+        "port": 5000
+      }
+    }
+  }
 }
