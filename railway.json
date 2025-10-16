@@ -1,0 +1,26 @@
+{
+  "services": {
+    "frontend": {
+      "path": "frontend",
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install && npm run build"
+      },
+      "deploy": {
+        "startCommand": "npm start",
+        "port": 3000
+      }
+    },
+    "backend": {
+      "path": "backend",
+      "build": {
+        "builder": "NIXPACKS",
+        "buildCommand": "npm install"
+      },
+      "deploy": {
+        "startCommand": "node src/server.js",
+        "port": 5000
+      }
+    }
+  }
+}
